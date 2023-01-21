@@ -35,6 +35,7 @@ Used to create new product.
 ### Request
 
 **Content-Type**: application/json
+
 **Accept**: application/json
 
 ```json
@@ -69,6 +70,7 @@ Used to update product.
 ### Request
 
 **Content-Type**: application/json
+
 **Accept**: application/json
 
 ```json
@@ -104,6 +106,7 @@ Used to delete product.
 ### Request
 
 **Content-Type**: application/json
+
 **Accept**: application/json
 
 ```json
