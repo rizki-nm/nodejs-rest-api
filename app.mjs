@@ -11,6 +11,8 @@ const server = http.createServer((req, res) => {
         productService.getProducts(req, res);
     } else if (req.method === "POST") {
         productService.createProduct(req, res);
+    } else if (req.method === "PUT") {
+        productService.updateProduct(req, res);
     }
 })
 

@@ -28,4 +28,16 @@ export class ProductService {
             res.end();
         })
     }
+
+    updateProduct(req, res) {
+        req.addListener("data", (data) => {
+            const body = JSON.parse(data.toString());
+            if (this.products[body.id]) {
+                this.products[body.id] = body.product;
+            }
+
+            res.write(this.getJsonProduct())
+            res.end();
+        })
+    }
 }
