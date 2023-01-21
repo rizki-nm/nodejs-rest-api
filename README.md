@@ -1,6 +1,8 @@
 # Simple Rest API using Node JS without any framework.
 **The goals of this project is implement basic operation (insert, update, delete).**
 
+**Just implement in memory database**
+
 ## Get All Product
 
 Used to show all products.
