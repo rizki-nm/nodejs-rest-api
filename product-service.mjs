@@ -18,4 +18,14 @@ export class ProductService {
         res.write(this.getJsonProduct());
         res.end();
     }
+
+    createProduct(req, res) {
+        req.addListener("data", (data) => {
+            const body = JSON.parse(data.toString());
+            this.products.push(body.product);
+
+            res.write(this.getJsonProduct())
+            res.end();
+        })
+    }
 }

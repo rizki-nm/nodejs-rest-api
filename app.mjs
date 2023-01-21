@@ -9,6 +9,8 @@ const server = http.createServer((req, res) => {
 
     if (req.method === "GET") {
         productService.getProducts(req, res);
+    } else if (req.method === "POST") {
+        productService.createProduct(req, res);
     }
 })
 
