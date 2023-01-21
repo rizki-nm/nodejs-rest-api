@@ -40,4 +40,16 @@ export class ProductService {
             res.end();
         })
     }
+
+    deleteProduct(req, res) {
+        req.addListener("data", (data) => {
+            const body = JSON.parse(data.toString());
+            if (this.products[body.id]) {
+                this.products.splice(body.id, 1);
+            }
+
+            res.write(this.getJsonProduct())
+            res.end();
+        })
+    }
 }

@@ -13,6 +13,8 @@ const server = http.createServer((req, res) => {
         productService.createProduct(req, res);
     } else if (req.method === "PUT") {
         productService.updateProduct(req, res);
+    } else if (req.method === "DELETE") {
+        productService.deleteProduct(req, res);
     }
 })
 
